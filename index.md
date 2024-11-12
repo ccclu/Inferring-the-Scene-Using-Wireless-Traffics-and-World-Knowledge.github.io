@@ -9,7 +9,7 @@ Provide a brief overview of the project objhectives, approach, and results.
 
 # Required Submissions
 
-* [Proposal](https://github.com/oohhhhhhoo/Inferring-the-Scene-Using-Wireless-Traffics-and-World-Knowledge.github.io/blob/main/proposal.md)
+* [Proposal](https://github.com/oohhhhhhoo/Inferring-the-Scene-Using-Wireless-Traffics-and-World-Knowledge/blob/main/docs/proposal.md)
 * [Midterm Checkpoint Presentation Slides](http://)
 * [Final Presentation Slides](http://)
 * [Final Report](report)
