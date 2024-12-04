@@ -1,4 +1,4 @@
-# Abstract
+# Inferring the Scene Using Wirelss Traffic and World Knowledge
 
 Provide a brief overview of the project objhectives, approach, and results.
 
