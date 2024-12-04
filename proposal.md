@@ -1,3 +1,10 @@
+---
+layout: default
+title: Proposal
+permalink: /proposal/
+---
+
+
 # Project Proposal
 
 ## 1. Motivation & Objective
