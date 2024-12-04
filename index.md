@@ -1,7 +1,7 @@
 
 
-# Abstract
-Abstract
+# Inferring the Scene Using Wireless Traffics and World Knowledge
+
 
 # Introduction
 # Related Work
