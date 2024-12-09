@@ -169,7 +169,7 @@ Includes:
   
 2.Captured Surveillance camera corresponding  Wi-Fi packets.
 
-A total of 100 samples. Each with 40 seconds
+A total of 100 samples. Each with 40 seconds.\
 This dataset offers a robust foundation for studying the relationship between human activities, environments, and Wi-Fi signal patterns.
 
 We simulated a real living environment by playing a simulated video on a screen, with the camera positioned to face the screen. At the same time, we used the camera’s software to capture its live stream and employed a laptop to capture the Wi-Fi packets.
@@ -177,31 +177,28 @@ We simulated a real living environment by playing a simulated video on a screen,
 <img width="1289" alt="image" src="https://github.com/user-attachments/assets/ec855e8a-6425-4ac6-a364-d3d452efc4c5">
 <p align="center">Data Collection Scenario</p>
 
-
-
-
-
-
-<video src="https://github.com/user-attachments/assets/c2c94872-3491-4c22-9bd7-c4550e55b351" controls width="600">
+static scene
+<video src="https://github.com/user-attachments/assets/c2c94872-3491-4c22-9bd7-c4550e55b351" controls width="900">
   Your browser does not support the video tag.
 </video>
+<p align="center">static scene</p>
 
 
-<video src="https://github.com/user-attachments/assets/b7c5c723-7759-4c50-8483-9b4a90828ea2" controls width="600">
+<video src="https://github.com/user-attachments/assets/b7c5c723-7759-4c50-8483-9b4a90828ea2" controls width="900">
   Your browser does not support the video tag.
 </video>
+<p align="center">slightly move scene</p>
 
-
-<video src="https://github.com/user-attachments/assets/03fc8dc3-e5eb-469c-9d34-68d492397d48" controls width="600">
+<video src="https://github.com/user-attachments/assets/03fc8dc3-e5eb-469c-9d34-68d492397d48" controls width="900">
   Your browser does not support the video tag.
 </video>
+<p align="center">move scene</p>
 
 
-
-<video src="https://github.com/user-attachments/assets/cd31f717-b8ad-4133-bff8-fc1e02554cb7" controls width="600">
+<video src="https://github.com/user-attachments/assets/cd31f717-b8ad-4133-bff8-fc1e02554cb7" controls width="900">
   Your browser does not support the video tag.
 </video>
-
+<p align="center">intensive move scene</p>
 
 
 
