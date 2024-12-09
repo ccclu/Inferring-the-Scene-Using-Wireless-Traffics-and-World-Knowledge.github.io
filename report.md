@@ -3,7 +3,7 @@ layout: default
 title: Report
 permalink: /report/
 ---
-[Project Website](./index/)
+[Project Website](/index/)
 # Introduction
 
 
