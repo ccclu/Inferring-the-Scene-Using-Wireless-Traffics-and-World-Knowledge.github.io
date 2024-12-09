@@ -212,6 +212,11 @@ Extracted Features from Samples:
 4. Raw Data:
 * Although the raw data is encrypted, it still contains valuable patterns that can be used by neural networks for learning.
 
+Since the dataset we created is not large enough, overfitting occurred in our experiment. Therefore, we applied Principal Component Analysis (PCA) to reduce the dimensionality of the input raw data, as it is likely to contain redundant information and noise.
+
+<img width="1014" alt="image" src="https://github.com/user-attachments/assets/4335275e-6705-4e3f-94ae-bd72272b9ad4">
+
+
 ## 4. Neural Network
 
 
