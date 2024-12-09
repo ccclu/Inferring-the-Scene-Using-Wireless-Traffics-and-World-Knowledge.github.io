@@ -167,9 +167,13 @@ Includes:
 A total of 100 samples. Each with 40 seconds.\
 This dataset offers a robust foundation for studying the relationship between human activities, environments, and Wi-Fi signal patterns.
 
-**SIMULATION CODE** can be found at: [Simulation Code](https://drive.google.com/file/d/15o04rU0c32uxdAb3nhUy2VRNA9IiGjgN/view?usp=share_link)
+
 
 We simulated a real living environment by playing a simulated video on a screen, with the camera positioned to face the screen. At the same time, we used the camera’s software to capture its live stream and employed a laptop to capture the Wi-Fi packets.
+
+**SIMULATION CODE** can be found at: [Simulation Code](https://drive.google.com/file/d/15o04rU0c32uxdAb3nhUy2VRNA9IiGjgN/view?usp=share_link)
+
+**DATASET** can be found at: [Dataset Link](https://drive.google.com/drive/folders/1Pzd6_ZqU6EvLfg4jY3ojDCq4nHZRYo3U?usp=share_link)
 
 <img width="1289" alt="image" src="https://github.com/user-attachments/assets/ec855e8a-6425-4ac6-a364-d3d452efc4c5">
 <p align="center">Data Collection Scenario</p>
