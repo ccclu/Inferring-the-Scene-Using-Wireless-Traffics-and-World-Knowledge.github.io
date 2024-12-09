@@ -148,6 +148,7 @@ Pytorch
 2. keep static for first 20s, then moving object for 20s, with motion detection
 <img width="1678" alt="image" src="https://github.com/user-attachments/assets/6ce04627-a3f7-4d68-b56a-3dbd7b4a21db">
 3. remain silent for 20s, sending control signal for 20s
+    <img width="1678" alt="image" src="https://github.com/user-attachments/assets/13899a1c-eb1c-46ad-ab2c-bcd4cc1a66f0">
 
 
 
