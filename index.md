@@ -13,5 +13,5 @@ With the rise of smart home IoT devices and low-cost wireless sensors, privacy l
 
 * [Proposal](./proposal/)
 * [Midterm Checkpoint Presentation Slides](https://docs.google.com/presentation/d/1suFLkcEiuQo_ymM7OKt5ODy9S-apGyerMeEjVB6M0Ac/edit#slide=id.p)
-* [Final Presentation Slides]([http://](https://docs.google.com/presentation/d/1XeWMUBPGvBwQCh91-VpWnqeVUMIuwyI8f28ORgpVKGg/edit?usp=sharing))
+* [Final Presentation Slides](https://docs.google.com/presentation/d/1XeWMUBPGvBwQCh91-VpWnqeVUMIuwyI8f28ORgpVKGg/edit?usp=sharing)
 * [Final Report](./report/)
