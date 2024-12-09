@@ -237,6 +237,54 @@ To model these characteristics, we used Long Short-Term Memory (LSTM) networks, 
 
 
 # Evaluation and Results
+## Training Set Metrics:
+
+- **Accuracy**: 0.74
+- **Precision**: 0.81
+- **Recall**: 0.74
+
+### Classification Report:
+
+| Category        | Precision | Recall | F1-Score |
+|-----------------|-----------|--------|----------|
+| Static          | 0.93      | 0.72   | 0.81     |
+| Slightly Move   | 1.00      | 0.60   | 0.75     |
+| Move            | 0.58      | 1.00   | 0.73     |
+| Intensely Move  | 0.75      | 0.63   | 0.69     |
+| **Average**     | 0.81      | 0.74   | 0.75     |
+
+
+## Validation Set Metrics:
+
+- **Accuracy**: 0.48
+- **Precision**: 0.51
+- **Recall**: 0.50
+
+### Classification Report:
+
+| Category        | Precision | Recall | F1-Score |
+|-----------------|-----------|--------|----------|
+| Static          | 0.44      | 0.57   | 0.50     |
+| Slightly Move   | 0.75      | 0.30   | 0.43     |
+| Move            | 0.45      | 0.71   | 0.56     |
+| Intensely Move  | 0.40      | 0.40   | 0.40     |
+| **Average**     | 0.51      | 0.50   | 0.47     |
+
+## Overall Metrics:
+
+- **Accuracy**: 0.67
+- **Precision**: 0.72
+- **Recall**: 0.67
+
+### Classification Report:
+
+| Category        | Precision | Recall | F1-Score |
+|-----------------|-----------|--------|----------|
+| Static          | 0.74      | 0.68   | 0.71     |
+| Slightly Move   | 0.92      | 0.48   | 0.63     |
+| Move            | 0.55      | 0.92   | 0.69     |
+| Intensely Move  | 0.67      | 0.58   | 0.62     |
+| **Average**     | 0.72      | 0.67   | 0.66     |
 
 # Discussion and Conclusions
 
