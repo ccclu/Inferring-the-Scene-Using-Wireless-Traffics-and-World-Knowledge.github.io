@@ -166,12 +166,17 @@ Includes:
 * The dataset includes 5 distinct background settings, representing various indoor environments
 * It features 5 different figures, simulating a diverse range of individuals
 * Each figure performs 4 movement states: static, slightly move, move, and intensive move
+  
 2.Captured Surveillance camera corresponding  Wi-Fi packets.
-A total of 100 samples. Each with 40 seconds
 
+A total of 100 samples. Each with 40 seconds
 This dataset offers a robust foundation for studying the relationship between human activities, environments, and Wi-Fi signal patterns.
 
+We simulated a real living environment by playing a simulated video on a screen, with the camera positioned to face the screen. At the same time, we used the camera’s software to capture its live stream and employed a laptop to capture the Wi-Fi packets.
+
 <img width="1289" alt="image" src="https://github.com/user-attachments/assets/ec855e8a-6425-4ac6-a364-d3d452efc4c5">
+<p align="center">Data Collection Scenario</p>
+
 
 
 
