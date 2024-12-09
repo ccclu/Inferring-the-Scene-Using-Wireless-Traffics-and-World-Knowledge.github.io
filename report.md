@@ -219,12 +219,16 @@ Since the dataset we created is not large enough, overfitting occurred in our ex
 
 ## 4. Wi-Fi Packet Analysis with LSTM
 We analyzed the characteristics of Wi-Fi packets, focusing on their sequential nature, time dependencies, and transmission patterns.
-	1.	Sequential Nature:
+
+1. Sequential Nature:
 Wi-Fi packets arrive in a specific order, forming a sequential flow of data.
-	2.	Time Dependencies:
+
+3. Time Dependencies:
 The timing between packets indicates network activity, such as congestion or delays.
-	3.	Transmission Patterns:
+
+4. Transmission Patterns:
 Packet transmission often shows periodic bursts and changes in packet size, reflecting network behavior.
+
 To model these characteristics, we used Long Short-Term Memory (LSTM) networks, which are well-suited for sequential data. LSTM networks capture both short-term and long-term dependencies, allowing us to detect patterns in packet arrival and size changes over time.
 
 
