@@ -236,7 +236,8 @@ To model these characteristics, we used Long Short-Term Memory (LSTM) networks, 
 
 Our code for **LSTM** can be found at: [LSTM Code](https://drive.google.com/file/d/1pprDRGJ8rJU1_BBaC2nSboCtED4ne96n/view?usp=sharing)
 
-**OUR BEST MODEL** can be found at: [Best Model Code](https://drive.google.com/file/d/1HiIyg7Vl3xXvdV6SsQMzfeyxCUanghgG/view?usp=share_link)
+OUR **BEST MODEL** can be found at: [Best Model Code](https://drive.google.com/file/d/1HiIyg7Vl3xXvdV6SsQMzfeyxCUanghgG/view?usp=share_link)
+
 
 Also, we've tested with other algorithms but received lower accuracy:
 
