@@ -231,6 +231,10 @@ Packet transmission often shows periodic bursts and changes in packet size, refl
 
 To model these characteristics, we used Long Short-Term Memory (LSTM) networks, which are well-suited for sequential data. LSTM networks capture both short-term and long-term dependencies, allowing us to detect patterns in packet arrival and size changes over time.
 
+![LSTM_Cell svg](https://github.com/user-attachments/assets/c2d4a918-2eca-4df3-b9ff-fd09e18e30a4)
+<p align="center">By Guillaume Chevalier - File:The_LSTM_Cell.svg, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=109362147</p>
+
+
 
 # Evaluation and Results
 
