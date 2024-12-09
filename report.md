@@ -234,15 +234,22 @@ To model these characteristics, we used Long Short-Term Memory (LSTM) networks, 
 ![LSTM_Cell svg](https://github.com/user-attachments/assets/c2d4a918-2eca-4df3-b9ff-fd09e18e30a4)
 <p align="center">By Guillaume Chevalier - File:The_LSTM_Cell.svg, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=109362147</p>
 
-Our code for LSTM can be found at: [LSTM Code](https://drive.google.com/file/d/1pprDRGJ8rJU1_BBaC2nSboCtED4ne96n/view?usp=sharing)
+Our code for **LSTM** can be found at: [LSTM Code](https://drive.google.com/file/d/1pprDRGJ8rJU1_BBaC2nSboCtED4ne96n/view?usp=sharing)
+
 **OUR BEST MODEL** can be found at: [Best Model Code](https://drive.google.com/file/d/1HiIyg7Vl3xXvdV6SsQMzfeyxCUanghgG/view?usp=share_link)
 
 Also, we've tested with other algorithms but received lower accuracy:
-KNN code can be found at: [KNN Code](https://drive.google.com/file/d/1iz_UsknPecgTOGVodqcKuv07nHfwUqJm/view?usp=share_link)
-HMM code can be found at: [HMM Code](https://drive.google.com/file/d/14fSbUs4xWUS_v8MiYYj7hMKvZ0vrsp0h/view?usp=share_link)
-DECISION TREE code can be found at: [Decision Tree Code](https://drive.google.com/file/d/13EVhBrG8-FMqMXZps9YmxYXTACod-r60/view?usp=share_link)
+
+**KNN** code can be found at: [KNN Code](https://drive.google.com/file/d/1iz_UsknPecgTOGVodqcKuv07nHfwUqJm/view?usp=share_link)
+
+**HMM** code can be found at: [HMM Code](https://drive.google.com/file/d/14fSbUs4xWUS_v8MiYYj7hMKvZ0vrsp0h/view?usp=share_link)
+
+**DECISION TREE** code can be found at: [Decision Tree Code](https://drive.google.com/file/d/13EVhBrG8-FMqMXZps9YmxYXTACod-r60/view?usp=share_link)
+
 **SVM** code can be found at: [SVM Code](https://drive.google.com/file/d/1JYQbJJbcSaHmGLjU__qGeaBzYKtYzmZ9/view?usp=share_link)
+
 **MLP** code can be found at: [MLP Code](https://drive.google.com/file/d/1x-SDei8_IJZ6IihagWwy0vYkGxr8ODhR/view?usp=share_link)
+
 **TRANSFORMER** code can be found at: [Transformer Code](https://drive.google.com/file/d/1r2YFhK9J4cdkMYK5XkTrPbKfyr7Pi0te/view?usp=share_link)
 
 # Evaluation and Results
