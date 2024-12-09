@@ -130,11 +130,6 @@ If FOSCAM camera can infer the number of people in a single room.
 3. Clearify how FOSCAM transport H.264 in traffic package.
 4. Find what kind of info from FOSCAM can be used to infer the number of people in the room. Begin it in a small sofa and two working people.
 
-### Essays
-1. https://www.usenix.org/conference/usenixsecurity21/presentation/singh  · H.264 Image Compression-Using 3 key frame-types
-2. https://www.usenix.org/conference/usenixsecurity22/presentation/sharma-rahul
-3. https://dl.acm.org/doi/abs/10.1145/3580890
-
 
 ### Prior Knowledge
 #### 802.11b
@@ -233,3 +228,5 @@ Extracted Features from Samples:
 3. Ignacio Sanchez, Riccardo Satta, Igor Nai Fovino, Gianmarco Baldini, Gary Steri, David Shaw, and Andrea Ciardulli. 2014. Privacy leakages in Smart Home wireless technologies. In International Carnahan Conference on Security Technology, ICCST 2014, Rome, Italy, October 13-16, 2014. 1–6.
 4. “Wireshark · Go Deep.” Wireshark, www.wireshark.org.
 5. “Recording a Wi-Fi Packet Trace, Apple Developer Documentation.” Apple Developer Documentation, 2024, developer.apple.com/documentation/network/recording-a-wi-fi-packet-trace.
+6. Sharma, Rahul Anand, et al. "Lumos: Identifying and localizing diverse hidden {IoT} devices in an unfamiliar environment." 31st USENIX Security Symposium (USENIX Security 22). 2022.
+7. Singh, Akash Deep, et al. "I always feel like somebody's sensing me! A framework to detect, identify, and localize clandestine wireless sensors." 30th USENIX Security Symposium (USENIX Security 21). 2021.
