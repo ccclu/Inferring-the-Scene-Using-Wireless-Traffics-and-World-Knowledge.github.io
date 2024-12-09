@@ -166,7 +166,7 @@ Includes:
 
 A total of 100 samples. Each with 40 seconds.\
 This dataset offers a robust foundation for studying the relationship between human activities, environments, and Wi-Fi signal patterns.
-
+**SIMULATION CODE** can be found at: [Simulation Code](https://drive.google.com/file/d/15o04rU0c32uxdAb3nhUy2VRNA9IiGjgN/view?usp=share_link)
 We simulated a real living environment by playing a simulated video on a screen, with the camera positioned to face the screen. At the same time, we used the camera’s software to capture its live stream and employed a laptop to capture the Wi-Fi packets.
 
 <img width="1289" alt="image" src="https://github.com/user-attachments/assets/ec855e8a-6425-4ac6-a364-d3d452efc4c5">
@@ -234,6 +234,13 @@ To model these characteristics, we used Long Short-Term Memory (LSTM) networks, 
 ![LSTM_Cell svg](https://github.com/user-attachments/assets/c2d4a918-2eca-4df3-b9ff-fd09e18e30a4)
 <p align="center">By Guillaume Chevalier - File:The_LSTM_Cell.svg, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=109362147</p>
 
+Our code for LSTM can be found at: [LSTM Code](https://drive.google.com/file/d/1pprDRGJ8rJU1_BBaC2nSboCtED4ne96n/view?usp=sharing)
+
+Also, we've tested with other algorithms but received lower accuracy:
+KNN code can be found at: [KNN Code](https://drive.google.com/file/d/1iz_UsknPecgTOGVodqcKuv07nHfwUqJm/view?usp=share_link)
+HMM code can be found at: [HMM Code](https://drive.google.com/file/d/14fSbUs4xWUS_v8MiYYj7hMKvZ0vrsp0h/view?usp=share_link)
+
+https://drive.google.com/file/d/14fSbUs4xWUS_v8MiYYj7hMKvZ0vrsp0h/view?usp=share_link
 
 
 # Evaluation and Results
