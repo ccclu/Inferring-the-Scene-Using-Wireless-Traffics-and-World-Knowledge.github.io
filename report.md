@@ -3,7 +3,7 @@ layout: default
 title: [Inferring the Scene Using Wireless Traffic and World Knowledge Final Report]
 permalink: /report/
 ---
-[Project Website]((https://ccclu.github.io/Inferring-the-Scene-Using-Wireless-Traffics-and-World-Knowledge.github.io/)
+[Project Website](https://ccclu.github.io/Inferring-the-Scene-Using-Wireless-Traffics-and-World-Knowledge.github.io/)
 # Introduction
 
 
