@@ -4,6 +4,20 @@ title: [Inferring the Scene Using Wireless Traffic and World Knowledge Final Rep
 permalink: /report/
 ---
 [Project Website](https://ccclu.github.io/Inferring-the-Scene-Using-Wireless-Traffics-and-World-Knowledge.github.io/)
+
+
+# Table of Contents
+* Abstract
+* [Introduction](#1-introduction)
+* [Related Work](#2-related-work)
+* [Technical Approach](#3-technical-approach)
+* [Evaluation and Results](#4-evaluation-and-results)
+* [Discussion and Conclusions](#5-discussion-and-conclusions)
+* [References](#6-references)
+
+# Abstract
+
+Provide a brief overview of the project objhectives, approach, and results.
 # Introduction
 
 ## 1. Motivation & Objective
