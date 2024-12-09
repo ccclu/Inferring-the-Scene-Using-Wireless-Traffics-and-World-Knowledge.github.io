@@ -171,9 +171,15 @@ A total of 100 samples. Each with 40 seconds
 
 This dataset offers a robust foundation for studying the relationship between human activities, environments, and Wi-Fi signal patterns.
 
-<video src="[assets/video.mp4](https://github.com/user-attachments/assets/2c33b233-3d9e-4b7b-8696-084ed1480325)" controls width="600">
+<video src="[b4_p4_0.mp4]" controls width="600">
   Your browser does not support the video tag.
 </video>
+
+
+<video src="assets/b4_p4_0.mp4" controls width="600">
+  Your browser does not support the video tag.
+</video>
+
 
 
 <video src="(https://github.com/user-attachments/assets/96b7f0d0-d7a0-4487-912d-17d34ff1a155)" controls width="600">
