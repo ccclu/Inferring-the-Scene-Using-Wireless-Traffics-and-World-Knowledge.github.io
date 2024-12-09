@@ -114,8 +114,10 @@ Pytorch
 
 ## 1. Transmission Pattern Verification
 
-### Goal: use traffic info from sensors to indicate some of human activities
-1. If FOSCAM camera can infer the number of people in a single room.
+### Goal
+Use traffic info from sensors to indicate some of human activities.
+If FOSCAM camera can infer the number of people in a single room.
+
 ### Steps
 1. Identify the connection between packets traffic for camera and human motion
    ![image](https://github.com/user-attachments/assets/1198b501-2a46-45af-a3b0-5a7d8f57b7e6)
