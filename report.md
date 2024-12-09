@@ -152,11 +152,33 @@ If FOSCAM camera can infer the number of people in a single room.
 <img width="1678" alt="image" src="https://github.com/user-attachments/assets/6ce04627-a3f7-4d68-b56a-3dbd7b4a21db">
 3. remain silent for 20s, sending control signal for 20s
     <img width="1678" alt="image" src="https://github.com/user-attachments/assets/13899a1c-eb1c-46ad-ab2c-bcd4cc1a66f0">
+    
 ### Conclusion 
 There is a significant difference in the transmission patterns across various scenarios captured by the camera sensor, which confirms that using Wi-Fi traffic to infer the scene is a valid approach.
 
 
 ## 2. Dataset Collection
+There is no public dataset for our project, thus, we created our own dataset.
+
+
+
+https://github.com/user-attachments/assets/2c33b233-3d9e-4b7b-8696-084ed1480325
+
+
+
+
+https://github.com/user-attachments/assets/96b7f0d0-d7a0-4487-912d-17d34ff1a155
+
+
+https://github.com/user-attachments/assets/03fc8dc3-e5eb-469c-9d34-68d492397d48
+
+
+
+
+https://github.com/user-attachments/assets/a02c011c-79cd-46fc-82ec-442356552fb9
+
+
+<img width="1289" alt="image" src="https://github.com/user-attachments/assets/7d4552c9-e6f7-418a-a394-83fcf65818ce">
 
 
 ## 3. Transmission Pattern Verification
@@ -166,7 +188,9 @@ There is a significant difference in the transmission patterns across various sc
 
 
 # Evaluation and Results
+
 # Discussion and Conclusions
+
 # References
 
 1. Zou, Qingsong, et al. "Iotbeholder: A privacy snooping attack on user habitual behaviors from smart home wi-fi traffic." Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 7.1 (2023): 1-26.
