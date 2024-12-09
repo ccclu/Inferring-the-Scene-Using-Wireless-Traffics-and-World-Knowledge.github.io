@@ -10,10 +10,10 @@ permalink: /report/
 * [Abstract](#abstract)
 * [Introduction](#introduction)
 * [Related Work](#related-work)
-* [Technical Approach](#3-technical-approach)
-* [Evaluation and Results](#4-evaluation-and-results)
-* [Discussion and Conclusions](#5-discussion-and-conclusions)
-* [References](#6-references)
+* [Technical Approach](#technical-approach)
+* [Evaluation and Results](#evaluation-and-results)
+* [Discussion and Conclusions](#discussion-and-conclusions)
+* [References](#references)
 
 # Abstract
 With the rise of smart home IoT devices and low-cost wireless sensors, privacy leakage has become a significant concern. In this project, we aim to design an attack methodology that can infer human movement within a specific room by analyzing the wireless traffic from camera sensors combined with world knowledge, thereby demonstrating the serious privacy threats these wireless sensors pose to users.
