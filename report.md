@@ -129,7 +129,8 @@ If FOSCAM camera can infer the number of people in a single room.
    ![image](https://github.com/user-attachments/assets/fb24b5d0-c716-4e6e-a067-4bae05302b61)
 3. Clearify how FOSCAM transport H.264 in traffic package.
 4. Find what kind of info from FOSCAM can be used to infer the number of people in the room. Begin it in a small sofa and two working people.
-### Essays:
+
+### Essays
 1. https://www.usenix.org/conference/usenixsecurity21/presentation/singh
   · H.264 Image Compression-Using 3 key frame-types
 2. https://www.usenix.org/conference/usenixsecurity22/presentation/sharma-rahul
