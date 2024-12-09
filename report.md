@@ -176,7 +176,7 @@ This dataset offers a robust foundation for studying the relationship between hu
 </video>
 
 
-<video src="assets/b4_p4_0.mp4" controls width="600">
+<video src="asserts/b4_p4_0.mp4" controls width="600">
   Your browser does not support the video tag.
 </video>
 
