@@ -7,9 +7,9 @@ permalink: /report/
 
 
 # Table of Contents
-* [Abstract](#1-abstract)
-* [Introduction](#1-introduction)
-* [Related Work](#2-related-work)
+* [Abstract](#abstract)
+* [Introduction](#introduction)
+* [Related Work](#related-work)
 * [Technical Approach](#3-technical-approach)
 * [Evaluation and Results](#4-evaluation-and-results)
 * [Discussion and Conclusions](#5-discussion-and-conclusions)
