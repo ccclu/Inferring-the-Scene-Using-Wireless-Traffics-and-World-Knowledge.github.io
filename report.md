@@ -177,7 +177,7 @@ We simulated a real living environment by playing a simulated video on a screen,
 <img width="1289" alt="image" src="https://github.com/user-attachments/assets/ec855e8a-6425-4ac6-a364-d3d452efc4c5">
 <p align="center">Data Collection Scenario</p>
 
-Four states of movement captured by camara:
+### Four states of movement captured by camara:
 <video src="https://github.com/user-attachments/assets/c2c94872-3491-4c22-9bd7-c4550e55b351" controls width="900">
   Your browser does not support the video tag.
 </video>
@@ -202,17 +202,20 @@ Four states of movement captured by camara:
 
 ## 3. Feature Extraction
 Extracted Features from Samples:
-1.	Packet Length:
-	•	When encoding video with H.264, I-frames will produce larger packets because they encode complete frames.
-	•	P-frames and B-frames, on the other hand, typically result in smaller packets due to their compression of differences between frames.
-	•	This means that in scenes with significant motion (which requires more complex encoding), we’ll likely observe larger packet sizes. In static scenes with little change from frame to frame, the resulting packets will be smaller as fewer differences need to be encoded.
-	2.	Relative Timestamp:
-	•	The relative timestamp between packets may show a more consistent interval for static scenes, as the data rate remains relatively stable when fewer differences need to be encoded. In contrast, during scenes with motion, the frequency of larger packets (I-frames) may increase, resulting in a less regular timestamp pattern.
-	3.	Timing Difference Between Packets:
-	•	The timing differences between packets are influenced by the scene’s complexity. For scenes with significant motion, more packets need to be transmitted quickly to maintain the video’s fluidity, resulting in shorter timing differences between packets.
-	•	In static scenes, since fewer packets are needed to represent the scene, the timing differences might be larger, with packets being sent at less frequent intervals.
-	4.	Raw Data:
-	•	Although the raw data is encrypted, it still contains valuable patterns that can be used by neural networks for learning.
+1. Packet Length:
+* When encoding video with H.264, I-frames will produce larger packets because they encode complete frames.
+* P-frames and B-frames, on the other hand, typically result in smaller packets due to their compression of differences between frames.
+* This means that in scenes with significant motion (which requires more complex encoding), we’ll likely observe larger packet sizes. In static scenes with little change from frame to frame, the resulting packets will be smaller as fewer differences need to be encoded.
+  
+2. Relative Timestamp:
+* The relative timestamp between packets may show a more consistent interval for static scenes, as the data rate remains relatively stable when fewer differences need to be encoded. In contrast, during scenes with motion, the frequency of larger packets (I-frames) may increase, resulting in a less regular timestamp pattern.
+  
+3. Timing Difference Between Packets:
+* The timing differences between packets are influenced by the scene’s complexity. For scenes with significant motion, more packets need to be transmitted quickly to maintain the video’s fluidity, resulting in shorter timing differences between packets.
+* In static scenes, since fewer packets are needed to represent the scene, the timing differences might be larger, with packets being sent at less frequent intervals.
+  
+4. Raw Data:
+* Although the raw data is encrypted, it still contains valuable patterns that can be used by neural networks for learning.
 
 ## 4. Neural Network
 
