@@ -131,8 +131,7 @@ If FOSCAM camera can infer the number of people in a single room.
 4. Find what kind of info from FOSCAM can be used to infer the number of people in the room. Begin it in a small sofa and two working people.
 
 ### Essays
-1. https://www.usenix.org/conference/usenixsecurity21/presentation/singh
-  · H.264 Image Compression-Using 3 key frame-types
+1. https://www.usenix.org/conference/usenixsecurity21/presentation/singh  · H.264 Image Compression-Using 3 key frame-types
 2. https://www.usenix.org/conference/usenixsecurity22/presentation/sharma-rahul
 3. https://dl.acm.org/doi/abs/10.1145/3580890
 
@@ -153,13 +152,14 @@ If FOSCAM camera can infer the number of people in a single room.
 <img width="1678" alt="image" src="https://github.com/user-attachments/assets/6ce04627-a3f7-4d68-b56a-3dbd7b4a21db">
 3. remain silent for 20s, sending control signal for 20s
     <img width="1678" alt="image" src="https://github.com/user-attachments/assets/13899a1c-eb1c-46ad-ab2c-bcd4cc1a66f0">
-
+### Conclusion 
+There is a significant difference in the transmission patterns across various scenarios captured by the camera sensor, which confirms that using Wi-Fi traffic to infer the scene is a valid approach.
 
 
 ## 2. Dataset Collection
 
 
-## 1. Transmission Pattern Verification
+## 3. Transmission Pattern Verification
 
 
 
