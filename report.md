@@ -83,38 +83,32 @@ By systematically evaluating the model using these metrics, we can gain a compre
 ***2.*** Extract IPB-related information from the traffic flow data and analyze the relationship between the target’s movements and the IPB data.\
 ***3.*** Train a large language model (LLM) to take traffic flow data over a specific time period as input and output the transition times between different movement modes of the target, along with detailed movement information for each mode.
 
+# Related Work
 
-
-## 9. Related Work
-
-### 9.a. Papers
+### a. Papers
 Some works[2] and [3] use encrypted trafffc to analyze user behavior in smart home scenarios. And the work[1] identify a new end-to-end attack surface using IoTBeholder, a system that performs device localization, classiffcation, and user activity identiffcation, which can predict the user behavior by generating a branch of sensors’ information from traffic package.
 
-### 9.b. Datasets
+### b. Datasets
 
 TBD
-### 9.c. Software
+### c. Software
 
 Wireshark[4]\
 Macbook wifi sniffer[5]\
 Pytorch
+# Technical Approach
 
-## 10. References
+
+
+
+
+
+# Evaluation and Results
+# Discussion and Conclusions
+# References
 
 1. Zou, Qingsong, et al. "Iotbeholder: A privacy snooping attack on user habitual behaviors from smart home wi-fi traffic." Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies 7.1 (2023): 1-26.
 2. Rahmadi Trimananda, Janus Varmarken, Athina Markopoulou, and Brian Demsky. 2020. Packet-Level Signatures for Smart Home Devices. In Proceedings of 27th Annual Network and Distributed System Security Symposium, NDSS 2020, San Diego, California, USA, February 23-26, 2020. 
 3. Ignacio Sanchez, Riccardo Satta, Igor Nai Fovino, Gianmarco Baldini, Gary Steri, David Shaw, and Andrea Ciardulli. 2014. Privacy leakages in Smart Home wireless technologies. In International Carnahan Conference on Security Technology, ICCST 2014, Rome, Italy, October 13-16, 2014. 1–6.
 4. “Wireshark · Go Deep.” Wireshark, www.wireshark.org.
 5. “Recording a Wi-Fi Packet Trace, Apple Developer Documentation.” Apple Developer Documentation, 2024, developer.apple.com/documentation/network/recording-a-wi-fi-packet-trace.
-‌
-
-
-
-
-
-
-# Related Work
-# Technical Approach
-# Evaluation and Results
-# Discussion and Conclusions
-# References
