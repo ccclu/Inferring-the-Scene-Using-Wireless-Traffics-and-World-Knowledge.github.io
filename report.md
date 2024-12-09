@@ -175,7 +175,7 @@ This dataset offers a robust foundation for studying the relationship between hu
   Your browser does not support the video tag.
 </video>
 
-<video src="[[assets/video.mp4](https://github.com/user-attachments/assets/2c33b233-3d9e-4b7b-8696-084ed1480325)](https://github.com/user-attachments/assets/96b7f0d0-d7a0-4487-912d-17d34ff1a155)" controls width="600">
+<video src="(https://github.com/user-attachments/assets/96b7f0d0-d7a0-4487-912d-17d34ff1a155)" controls width="600">
   Your browser does not support the video tag.
 </video>
 <video src="[assets/video.mp4](https://github.com/user-attachments/assets/2c33b233-3d9e-4b7b-8696-084ed1480325)" controls width="600">
