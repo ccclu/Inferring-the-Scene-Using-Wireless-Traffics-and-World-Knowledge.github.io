@@ -159,7 +159,17 @@ There is a significant difference in the transmission patterns across various sc
 
 ## 2. Dataset Collection
 There is no public dataset for our project, thus, we created our own dataset.
+The dataset consists of two primary components:
 
+1.Simulation of human living environment
+Includes:
+* The dataset includes 5 distinct background settings, representing various indoor environments
+* It features 5 different figures, simulating a diverse range of individuals
+* Each figure performs 4 movement states: static, slightly move, move, and intensive move
+2.Captured Surveillance camera corresponding  Wi-Fi packets.
+A total of 100 samples. Each with 40 seconds
+
+This dataset offers a robust foundation for studying the relationship between human activities, environments, and Wi-Fi signal patterns.
 
 
 https://github.com/user-attachments/assets/2c33b233-3d9e-4b7b-8696-084ed1480325
