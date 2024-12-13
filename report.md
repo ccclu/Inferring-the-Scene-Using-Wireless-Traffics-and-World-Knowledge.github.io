@@ -74,8 +74,12 @@ Although we know the camera uses H.264, the compression process is encrypted, ma
 
 ## 6. Requirements for Success
 
-### 6.1 Detect Motion Changes in User Behavior
-Our model must first accurately detect sudden motion changes in user behavior. This includes identifying transitions such as moving from static to active states, shifting from a slow pace to a faster one, and changing from small-range movements (e.g., hand gestures) to large-range movements (e.g., walking).
+### 6.1 Verifying Changes in Traffic Package I/O Flow During Motion Transitions
+We aim to confirm that sudden motion changes in user behavior result in alterations to the I/O flow patterns of traffic packages. This includes identifying transitions such as:
+* *: Shifting from a static state to an active state;
+* *:Moving from slow to fast-paced activities;
+* *:Transitioning from small-scale motions (e.g., hand gestures) to large-scale movements (e.g., walking).
+By analyzing the I/O flow patterns of traffic packages, we can further validate whether motion changes correspond to variations in network traffic characteristics, thereby enhancing the model's understanding and classification capabilities for multi-modal data.
 
 ### 6.2 The intensity of the movement: Velocity and Range
 After detecting a change in the user's movement behavior, the system further utilizes neural networks and large language models (LLMs) to conduct an in-depth analysis of the updated movement information, including details such as movement speed and range. Through neural networks, the model can more accurately assess variations in the user's speed following a change in movement state, such as a shift from slow to fast motion or from a static to an active state. Additionally, the model can analyze changes in movement range, for example, transitioning from small hand movements to larger-scale actions like walking. This detailed analysis provides a more precise understanding of the user’s behavioral patterns and state changes, enhancing the capabilities of future intelligent applications.
