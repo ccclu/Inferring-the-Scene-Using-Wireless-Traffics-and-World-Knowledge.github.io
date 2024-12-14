@@ -75,9 +75,9 @@ Although we know the camera uses H.264, the compression process is encrypted, ma
 ## 6. Requirements for Success
 ### 6.1 Verifying Changes in Traffic Package I/O Flow During Motion Transitions
 We aim to confirm that sudden motion changes in user behavior result in alterations to the I/O flow patterns of traffic packages. This includes identifying transitions such as:
-* : Shifting from a static state to an active state;
-* : Moving from slow to fast-paced activities;
-* : Transitioning from small-scale motions (e.g., hand gestures) to large-scale movements (e.g., walking).
+* Shifting from a static state to an active state;
+* Moving from slow to fast-paced activities;
+* Transitioning from small-scale motions (e.g., hand gestures) to large-scale movements (e.g., walking).
 By analyzing the I/O flow patterns of traffic packages, we can further validate whether motion changes correspond to variations in network traffic characteristics, thereby enhancing the model's understanding and classification capabilities for multi-modal data.
 
 ### 6.2 The intensity of the movement: Velocity
