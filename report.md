@@ -330,71 +330,65 @@ The hyperparameters of the model have been carefully designed. The learning rate
 
 During the training and evaluation process, the learning rate is dynamically adjusted based on changes in the training loss to improve convergence speed and generalization performance. On the training set, the model demonstrated good classification ability, achieving an accuracy of 78.57%. However, on the validation set, the accuracy was 48.28%, indicating room for improvement in generalization.
 ## Result Metrics Discussion
-### **Training Set Analysis**
+### Training Set Analysis
 On the training set, the model performs reasonably well, achieving an accuracy of **74%**, indicating that the model correctly classified most samples. However, the macro average recall (**74%**) is slightly lower than the macro average precision (**81%**), suggesting that while the model's predictions are generally accurate, it misses some samples in certain categories.
 
-#### **Static**:
+#### Static:
 - Precision: **93%**, showing that the model predicts the static category very accurately, with most predictions being correct.
 - Recall: **72%**, meaning that **28%** of static samples were misclassified as other categories.
 
-#### **Slightly Move**:
+#### Slightly Move:
 - Precision: **100%**, indicating that all samples predicted as slightly moving were correct.
 - Recall: **60%**, meaning that only **60%** of slightly moving samples were correctly identified, and **40%** were misclassified.
 
-#### **Move**:
+#### Move:
 - Precision: **58%**, indicating lower accuracy in predicting the move category, with many misclassifications.
 - Recall: **100%**, showing that all samples in the move category were correctly identified with no omissions.
 
-#### **Intensely Move**:
+#### Intensely Move:
 - Precision: **75%**, Recall: **63%**. The model performs reasonably well in identifying intensely moving samples but still misclassifies some.
 
-**Summary**: The model performs well on the training set, particularly for static and move categories. However, it struggles with the slightly move and intensely move categories, as shown by their lower recall scores. This highlights the model's difficulty in distinguishing these categories.
+Summary: The model performs well on the training set, particularly for static and move categories. However, it struggles with the slightly move and intensely move categories, as shown by their lower recall scores. This highlights the model's difficulty in distinguishing these categories.
 
 ---
 
-### **Validation Set Analysis**
+### Validation Set Analysis
 
 On the validation set, the model's performance is significantly lower than on the training set, with an accuracy of **48%**, indicating insufficient generalization. The macro average precision (**51%**) and macro average recall (**50%**) are both lower than those on the training set, reflecting the model's poor classification performance on the validation set, particularly for certain categories.
 
-#### **Static**:
+#### Static:
 - Precision: **44%**, Recall: **57%**. The model performs moderately for the static category, with some static samples misclassified.
 
-#### **Slightly Move**:
+#### Slightly Move:
 - Precision: **75%**, indicating high precision for the slightly move category.
 - Recall: **30%**, showing that most slightly moving samples were not correctly identified, likely due to data imbalance or insufficient features.
 
-#### **Move**:
+#### Move:
 - Precision: **45%**, Recall: **71%**. The model achieves decent recall for the move category but has low precision, suggesting many false positives.
 
-#### **Intensely Move**:
+#### Intensely Move:
 - Precision: **40%**, Recall: **40%**. The model struggles significantly with the intensely move category, showing poor performance in both precision and recall.
 
-**Summary**: The model performs poorly on the validation set, particularly for the slightly move and intensely move categories. This indicates the model's inability to generalize effectively to unseen data.
+Summary: The model performs poorly on the validation set, particularly for the slightly move and intensely move categories. This indicates the model's inability to generalize effectively to unseen data.
 
 ---
 
-### **Overall Analysis**
+### Overall Analysis
 
 Combining results from both the training and validation sets, the overall accuracy is **67%**, with a macro average precision of **72%** and a macro average recall of **67%**. While the model performs well for static and move categories, it struggles to differentiate slightly move and intensely move samples.
 
-#### **Static** and **Move**:
+#### Static and Move:
 - These two categories have relatively high precision and recall, indicating that the model successfully learns their features.
 
-#### **Slightly Move** and **Intensely Move**:
+#### Slightly Move and Intensely Move:
 - The recall scores for these two categories are low, suggesting the model's difficulty in distinguishing them.
 - Possible reasons include imbalanced sample distribution, insufficient feature extraction, and limited model capability for handling these more complex categories.
-
-**Improvement Directions**:
-- **Data Level**: Increase the number of samples for slightly move and intensely move categories to address data imbalance.
-- **Feature Level**: Explore additional features, particularly time-series characteristics, that better capture motion intensity.
-- **Model Level**: Consider using more complex architectures or optimization techniques to enhance the model's generalization and improve its performance for challenging categories.
+---
 
 ## Conclusion
 In this project, we combined network traffic data and video motion information to explore various machine learning models and techniques with the goal of achieving high-accuracy classification and analysis of motion states (static, slightly moving, moving, and intensely moving). Through a series of processes involving data preprocessing, feature extraction, and model training, we have made significant progress while also identifying areas in both the data and the models that require improvement. These findings provide a clear direction for future optimizations.
 
----
-
-#### **Project Achievements**:
+### Project Achievements:
 1. **Data Processing and Feature Extraction**:
    - Successfully extracted key features from `.pcap` and `.json` files, including timestamps, packet lengths, and more, which provided a solid foundation for subsequent analysis and classification.
    - Standardized input data through normalization, alignment, and PCA dimensionality reduction, effectively reducing computational complexity while retaining critical information.
@@ -408,9 +402,8 @@ In this project, we combined network traffic data and video motion information t
    - The model achieved good recognition performance for static and moving categories, demonstrating its ability to learn key features of these states.
    - Recognition of slightly moving and intensely moving states faced challenges, likely due to insufficient sample sizes and less distinct data features, resulting in lower recall rates.
 
----
 
-#### **Challenges and Future Directions**:
+### Challenges and Future Directions:
 1. **Feature Optimization**:
    - The current dataset is limited to 100 samples, restricting the model's learning capabilities. Future efforts should focus on collecting more data, especially for slightly moving and intensely moving categories, to balance the sample distribution.
    - Extracting additional temporal features or combining network traffic data with motion information as multi-modal features could further enhance the model's ability to differentiate between motion states.
@@ -422,9 +415,8 @@ In this project, we combined network traffic data and video motion information t
    - Currently, network traffic and video motion information are processed separately. In the future, combining these two data types into a unified feature space could improve overall model performance.
    - Adding data from other sensors (e.g., motion sensors) could provide additional feature information and further enhance the model's ability to identify motion states accurately.
 
----
 
-#### **Conclusion**:
+### Summary:
 This project has made significant progress in addressing the multi-modal classification problem involving network traffic and video motion information, offering valuable insights for similar tasks involving temporal data analysis and multi-modal feature integration. Although the model still struggles with some categories, especially in validation accuracy, future improvements in data quality, feature richness, and model architecture are expected to significantly enhance the model’s scalability and practical applicability.
 
 # References
