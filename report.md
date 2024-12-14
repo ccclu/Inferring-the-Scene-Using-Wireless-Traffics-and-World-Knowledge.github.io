@@ -331,7 +331,7 @@ The hyperparameters of the model have been carefully designed. The learning rate
 During the training and evaluation process, the learning rate is dynamically adjusted based on changes in the training loss to improve convergence speed and generalization performance. On the training set, the model demonstrated good classification ability, achieving an accuracy of 78.57%. However, on the validation set, the accuracy was 48.28%, indicating room for improvement in generalization.
 ## Result Metrics Discussion
 ### Training Set Analysis
-On the training set, the model performs reasonably well, achieving an accuracy of **74%**, indicating that the model correctly classified most samples. However, the macro average recall (**74%**) is slightly lower than the macro average precision (**81%**), suggesting that while the model's predictions are generally accurate, it misses some samples in certain categories.
+On the training set, the model performs reasonably well, achieving an accuracy of **74%**, indicating that the model correctly classified most samples. And the average recall is **74%**, suggesting that while the model's predictions are generally accurate, it misses some samples in certain categories.
 
 #### Static:
 - Precision: **93%**, showing that the model predicts the static category very accurately, with most predictions being correct.
@@ -354,7 +354,7 @@ Summary: The model performs well on the training set, particularly for static an
 
 ### Validation Set Analysis
 
-On the validation set, the model's performance is significantly lower than on the training set, with an accuracy of **48%**, indicating insufficient generalization. The macro average precision (**51%**) and macro average recall (**50%**) are both lower than those on the training set, reflecting the model's poor classification performance on the validation set, particularly for certain categories.
+On the validation set, the model's performance is significantly lower than on the training set, with an accuracy of **48%**, indicating insufficient generalization. The average recall (**50%**) is lower than those on the training set, reflecting the model's poor classification performance on the validation set, particularly for certain categories.
 
 #### Static:
 - Precision: **44%**, Recall: **57%**. The model performs moderately for the static category, with some static samples misclassified.
@@ -375,7 +375,7 @@ Summary: The model performs poorly on the validation set, particularly for the s
 
 ### Overall Analysis
 
-Combining results from both the training and validation sets, the overall accuracy is **67%**, with a macro average precision of **72%** and a macro average recall of **67%**. While the model performs well for static and move categories, it struggles to differentiate slightly move and intensely move samples.
+Combining results from both the training and validation sets, the overall accuracy is **67%** and a average recall of **67%**. While the model performs well for static and move categories, it struggles to differentiate slightly move and intensely move samples.
 
 #### Static and Move:
 - These two categories have relatively high precision and recall, indicating that the model successfully learns their features.
