@@ -73,16 +73,18 @@ Although we know the camera uses H.264, the compression process is encrypted, ma
 
 
 ## 6. Requirements for Success
-
 ### 6.1 Verifying Changes in Traffic Package I/O Flow During Motion Transitions
 We aim to confirm that sudden motion changes in user behavior result in alterations to the I/O flow patterns of traffic packages. This includes identifying transitions such as:
-* *: Shifting from a static state to an active state;
-* *:Moving from slow to fast-paced activities;
-* *:Transitioning from small-scale motions (e.g., hand gestures) to large-scale movements (e.g., walking).
+* : Shifting from a static state to an active state;
+* : Moving from slow to fast-paced activities;
+* : Transitioning from small-scale motions (e.g., hand gestures) to large-scale movements (e.g., walking).
 By analyzing the I/O flow patterns of traffic packages, we can further validate whether motion changes correspond to variations in network traffic characteristics, thereby enhancing the model's understanding and classification capabilities for multi-modal data.
 
-### 6.2 The intensity of the movement: Velocity and Range
-After detecting a change in the user's movement behavior, the system further utilizes neural networks and large language models (LLMs) to conduct an in-depth analysis of the updated movement information, including details such as movement speed and range. Through neural networks, the model can more accurately assess variations in the user's speed following a change in movement state, such as a shift from slow to fast motion or from a static to an active state. Additionally, the model can analyze changes in movement range, for example, transitioning from small hand movements to larger-scale actions like walking. This detailed analysis provides a more precise understanding of the user’s behavioral patterns and state changes, enhancing the capabilities of future intelligent applications.
+### 6.2 The intensity of the movement: Velocity
+### 6.2 Motion Intensity: Speed  
+
+After confirming changes in the traffic flow graph, we need to utilize the model to conduct an in-depth analysis of the updated motion information, focusing primarily on movement speed. We adopt a classic four-class classification task, categorizing different motion states based on speed into static, slight movement, movement, and intense movement.  
+This approach enables the model to more accurately capture changes in speed following a motion state transition, such as moving from slow to fast or transitioning from a static state to an active state. This detailed classification and analysis provide a more precise understanding of user behavior patterns and state changes, offering robust support for future intelligent applications.  
 
 
 ## 7. Metrics of Success
@@ -91,6 +93,7 @@ To evaluate the model's performance, we will employ traditional machine learning
 * ***Accuracy***: This metric reflects the overall effectiveness of the model by measuring the proportion of correct predictions out of all predictions made. High accuracy indicates that the model consistently makes correct classifications, providing a reliable overview of its general performance across the dataset.
 * ***Precision***: Precision assesses the model’s ability to correctly identify positive instances among the instances it has classified as positive. It is especially crucial in scenarios where false positives (incorrectly labeling an instance as positive) have significant consequences. A high precision score demonstrates that the model is effective at minimizing false positives.
 * ***Recall***: Also known as sensitivity or true positive rate, recall measures the model’s capacity to identify all relevant instances within the dataset. It evaluates the proportion of actual positives that the model successfully detects. High recall is essential when it is critical to capture all positive cases, as it reduces the risk of missing any relevant instance.
+* ***F1 Score***:The F1 score is the harmonic mean of precision and recall, providing a balanced evaluation of the model's performance when both false positives and false negatives are equally important. It is particularly useful in scenarios with imbalanced datasets, where one class significantly outweighs others. A high F1 score indicates that the model achieves a good balance between precision and recall, making it effective in handling complex classification tasks where both metrics are critical.
   
 By systematically evaluating the model using these metrics, we can gain a comprehensive understanding of its strengths and areas for improvement, ensuring that it meets the necessary performance standards for accurate, dependable predictions.
 
@@ -107,13 +110,16 @@ By systematically evaluating the model using these metrics, we can gain a compre
 Some works[2] and [3] use encrypted trafffc to analyze user behavior in smart home scenarios. And the work[1] identify a new end-to-end attack surface using IoTBeholder, a system that performs device localization, classiffcation, and user activity identiffcation, which can predict the user behavior by generating a branch of sensors’ information from traffic package.
 
 ### b. Datasets
+The process of collecting data from videos to traffic packages is highly customized, making existing public datasets insufficient for our needs. Therefore, we must manually collect the data. This process involves multiple tasks, including designing experimental scenarios, configuring collection equipment, and synchronizing video data with traffic data.
+During data collection, we first use video recording devices to capture different motion states, while simultaneously using network packet capture tools to record traffic packages associated with these movements. Ensuring precise timestamp alignment is critical, as it allows us to correlate motion information from the videos with network characteristics from the traffic packages in subsequent analyses. Additionally, we design specific experimental setups to cover various motion states (e.g., static, slight movement, movement, and intense movement), ensuring that the data is representative and diverse.
+This custom-collected dataset provides strong support for our research, enabling us to better reflect user behavior characteristics in real-world scenarios. Although manual data collection requires significant time and effort, the resulting high-quality and highly targeted data form a solid foundation for model training and validation, ensuring the reliability and applicability of our experimental results.
 
-self collected dataset
 ### c. Software
 
-Wireshark[4]\
-Macbook wifi sniffer[5]\
-Pytorch
+* **Wireshark[4]**\: Analyze captured traffic packages and extract key features (e.g., timestamps, data length, etc.).
+* **Macbook wifi sniffer[5]**\: Capture wireless network traffic to provide data for analysis.
+* **Pytorch**: Build, train, and optimize classification models to accurately classify and analyze traffic features and motion states.
+
 # Technical Approach
 
 ## 1. Transmission Pattern Verification
@@ -264,6 +270,7 @@ Also, we've tested with other algorithms but received lower accuracy:
 **TRANSFORMER** code can be found at: [Transformer Code](https://drive.google.com/file/d/1r2YFhK9J4cdkMYK5XkTrPbKfyr7Pi0te/view?usp=share_link)
 
 # Evaluation and Results
+
 ## Training Set Metrics:
 
 - **Accuracy**: 0.74
@@ -314,6 +321,111 @@ Also, we've tested with other algorithms but received lower accuracy:
 | **Average**     | 0.72      | 0.67   | 0.66     |
 
 # Discussion and Conclusions
+## Model Disscussion
+Our best model is based on an LSTM architecture for the classification task. The input data for the model undergoes feature extraction and preprocessing, providing rich contextual information for the classification task. The feature extraction process consists of two main components: the first is the raw network traffic features, including timestamps, packet lengths, and other information; the second is the dimensionality-reduced features obtained through PCA, which reduces the original high-dimensional features to 256 dimensions, thereby lowering computational complexity while retaining essential information. Afterward, Feature 1 and the PCA-reduced Feature 2 are time-aligned and concatenated horizontally to form the final input features for the model, with a total input dimension of 2834.
+
+In terms of architecture, the LSTM model consists of three layers. The first layer is the LSTM layer, designed to extract temporal features and capture dynamic patterns of motion state changes. The second layer is a fully connected (FC) layer that maps the output of the LSTM to the classification space. Finally, the output layer performs a 4-class classification task, distinguishing between static, slightly moving, moving, and intensely moving states. The hidden layer is set to contain 16 neurons, with a Dropout layer (set to 0.4) included to mitigate overfitting risks.
+
+The hyperparameters of the model have been carefully designed. The learning rate is set to 0.001 and is adaptively adjusted using a scheduler. Additionally, weight decay regularization is applied to prevent excessively large weights from negatively impacting the model’s performance. The Adam optimizer is employed to further enhance the efficiency of the training process.
+
+During the training and evaluation process, the learning rate is dynamically adjusted based on changes in the training loss to improve convergence speed and generalization performance. On the training set, the model demonstrated good classification ability, achieving an accuracy of 78.57%. However, on the validation set, the accuracy was 48.28%, indicating room for improvement in generalization.
+## Result Metrics Discussion
+### **Training Set Analysis**
+On the training set, the model performs reasonably well, achieving an accuracy of **74%**, indicating that the model correctly classified most samples. However, the macro average recall (**74%**) is slightly lower than the macro average precision (**81%**), suggesting that while the model's predictions are generally accurate, it misses some samples in certain categories.
+
+#### **Static**:
+- Precision: **93%**, showing that the model predicts the static category very accurately, with most predictions being correct.
+- Recall: **72%**, meaning that **28%** of static samples were misclassified as other categories.
+
+#### **Slightly Move**:
+- Precision: **100%**, indicating that all samples predicted as slightly moving were correct.
+- Recall: **60%**, meaning that only **60%** of slightly moving samples were correctly identified, and **40%** were misclassified.
+
+#### **Move**:
+- Precision: **58%**, indicating lower accuracy in predicting the move category, with many misclassifications.
+- Recall: **100%**, showing that all samples in the move category were correctly identified with no omissions.
+
+#### **Intensely Move**:
+- Precision: **75%**, Recall: **63%**. The model performs reasonably well in identifying intensely moving samples but still misclassifies some.
+
+**Summary**: The model performs well on the training set, particularly for static and move categories. However, it struggles with the slightly move and intensely move categories, as shown by their lower recall scores. This highlights the model's difficulty in distinguishing these categories.
+
+---
+
+### **Validation Set Analysis**
+
+On the validation set, the model's performance is significantly lower than on the training set, with an accuracy of **48%**, indicating insufficient generalization. The macro average precision (**51%**) and macro average recall (**50%**) are both lower than those on the training set, reflecting the model's poor classification performance on the validation set, particularly for certain categories.
+
+#### **Static**:
+- Precision: **44%**, Recall: **57%**. The model performs moderately for the static category, with some static samples misclassified.
+
+#### **Slightly Move**:
+- Precision: **75%**, indicating high precision for the slightly move category.
+- Recall: **30%**, showing that most slightly moving samples were not correctly identified, likely due to data imbalance or insufficient features.
+
+#### **Move**:
+- Precision: **45%**, Recall: **71%**. The model achieves decent recall for the move category but has low precision, suggesting many false positives.
+
+#### **Intensely Move**:
+- Precision: **40%**, Recall: **40%**. The model struggles significantly with the intensely move category, showing poor performance in both precision and recall.
+
+**Summary**: The model performs poorly on the validation set, particularly for the slightly move and intensely move categories. This indicates the model's inability to generalize effectively to unseen data.
+
+---
+
+### **Overall Analysis**
+
+Combining results from both the training and validation sets, the overall accuracy is **67%**, with a macro average precision of **72%** and a macro average recall of **67%**. While the model performs well for static and move categories, it struggles to differentiate slightly move and intensely move samples.
+
+#### **Static** and **Move**:
+- These two categories have relatively high precision and recall, indicating that the model successfully learns their features.
+
+#### **Slightly Move** and **Intensely Move**:
+- The recall scores for these two categories are low, suggesting the model's difficulty in distinguishing them.
+- Possible reasons include imbalanced sample distribution, insufficient feature extraction, and limited model capability for handling these more complex categories.
+
+**Improvement Directions**:
+- **Data Level**: Increase the number of samples for slightly move and intensely move categories to address data imbalance.
+- **Feature Level**: Explore additional features, particularly time-series characteristics, that better capture motion intensity.
+- **Model Level**: Consider using more complex architectures or optimization techniques to enhance the model's generalization and improve its performance for challenging categories.
+
+## Conclusion
+In this project, we combined network traffic data and video motion information to explore various machine learning models and techniques with the goal of achieving high-accuracy classification and analysis of motion states (static, slightly moving, moving, and intensely moving). Through a series of processes involving data preprocessing, feature extraction, and model training, we have made significant progress while also identifying areas in both the data and the models that require improvement. These findings provide a clear direction for future optimizations.
+
+---
+
+#### **Project Achievements**:
+1. **Data Processing and Feature Extraction**:
+   - Successfully extracted key features from `.pcap` and `.json` files, including timestamps, packet lengths, and more, which provided a solid foundation for subsequent analysis and classification.
+   - Standardized input data through normalization, alignment, and PCA dimensionality reduction, effectively reducing computational complexity while retaining critical information.
+
+2. **Model Development and Comparison**:
+   - Implemented and compared various machine learning and deep learning models, including traditional models (e.g., KNN, SVM, Decision Trees, and HMM) as well as deep learning models (e.g., MLP and LSTM).
+   - Among the traditional models, performance was generally close to random classification (Base Line: 25%), with most achieving around 25% accuracy, except for HMM, which reached 30%.
+   - Deep learning models, particularly LSTM and MLP, outperformed traditional methods, showing strong performance on the training set. However, validation accuracy was relatively lower, especially in distinguishing between slightly moving and intensely moving categories.
+
+3. **Performance Analysis**:
+   - The model achieved good recognition performance for static and moving categories, demonstrating its ability to learn key features of these states.
+   - Recognition of slightly moving and intensely moving states faced challenges, likely due to insufficient sample sizes and less distinct data features, resulting in lower recall rates.
+
+---
+
+#### **Challenges and Future Directions**:
+1. **Feature Optimization**:
+   - The current dataset is limited to 100 samples, restricting the model's learning capabilities. Future efforts should focus on collecting more data, especially for slightly moving and intensely moving categories, to balance the sample distribution.
+   - Extracting additional temporal features or combining network traffic data with motion information as multi-modal features could further enhance the model's ability to differentiate between motion states.
+
+2. **Improving Model Generalization**:
+   - The significant performance gap between the training and validation sets indicates an overfitting issue. Future improvements could include introducing regularization strategies (e.g., L2 regularization, Dropout) or using data augmentation techniques to improve the model’s generalization.
+
+3. **Multi-Modal Data Integration**:
+   - Currently, network traffic and video motion information are processed separately. In the future, combining these two data types into a unified feature space could improve overall model performance.
+   - Adding data from other sensors (e.g., motion sensors) could provide additional feature information and further enhance the model's ability to identify motion states accurately.
+
+---
+
+#### **Conclusion**:
+This project has made significant progress in addressing the multi-modal classification problem involving network traffic and video motion information, offering valuable insights for similar tasks involving temporal data analysis and multi-modal feature integration. Although the model still struggles with some categories, especially in validation accuracy, future improvements in data quality, feature richness, and model architecture are expected to significantly enhance the model’s scalability and practical applicability.
 
 # References
 
